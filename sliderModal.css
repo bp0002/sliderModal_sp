@@ -1,0 +1,68 @@
+/*  */
+.slidermodal, .slidermodal>.content{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.slidermodal>.content li{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.slidermodal>.content li *{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* 大图片 */
+/* .slidermodal>.content li img{
+  position: absolute;
+  height: auto;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+} */
+/* 指示器 */
+.slidermodal>.cursor{
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  z-index: 2;
+  width: 300px;
+  height: 20px;
+  background: rgba(66, 66, 66, 0.5);
+  border-radius: 10px;
+  padding: 0;
+}
+/*项内容高 20 - 2 - 2 px 
+  内联块级
+*/
+.slidermodal>.cursor li{
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  padding: 4px 5px;
+  cursor: pointer;
+  
+  background: rgba(223, 255, 250, .5);
+  background-clip: content-box;
+  border-radius: 10px;
+}
+.slidermodal>.cursor li i{
+  /* position: absolute; */
+  display: inline-block;
+  /* height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(223, 255, 250, .5); */
+}
+.slidermodal>.cursor li.active{
+  background: rgba(0, 207, 158, 0.8);
+  background-clip: content-box;
+  border-radius: 10px;
+}
