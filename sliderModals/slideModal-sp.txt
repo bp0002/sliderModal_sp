@@ -1,0 +1,8 @@
+说明：
+sliderModal-sp 为 轮播组件各轮播特效实现
+
+sliderModal-sp    没有特效，普通的切换
+sliderModal-sp.1  淡入淡出
+sliderModal-sp.2  左右立方体滚动方式
+sliderModal-sp.3  上下立方体滚动方式
+sliderModal-sp.4  多叠片切换方式
