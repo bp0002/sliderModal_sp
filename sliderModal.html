@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  div.test{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: 0 50px 30px;
+  }
+  </style>
+  <link rel="stylesheet" href="sliderModal.css">
+</head>
+<body>
+  <!-- 无特效 -->
+  <div class="test" id="test00">
+
+  </div>
+  <!-- 淡入淡出 -->
+  <div class="test" id="test01">
+
+  </div>
+  
+  <!-- 加载轮播组件 -->
+  <script>
+    // 原文件在完成==外层还有modals组件管理器，可自行修改文件去除
+    var modals = {};
+  </script>
+  <script src="sliderModal.js"></script>
+  <script src="sliderModals/sliderModal-sp.js"></script>
+  <script src="sliderModals/sliderModal-sp.1.js"></script>
+  <script>
+  // 加载轮播组件
+  (function(){
+    var opt = {};
+    opt.container = document.getElementById("test00");
+    opt.interval = 3000;
+    opt.option = 0;
+    opt.imgArr = [
+      ["res/1.jpg"]
+      ,["res/2.jpg"]
+      ,["res/3.jpg"]
+      ,["res/4.jpg"]
+      ,["res/5.jpg"]
+    ];
+    var slider0 = new SliderModal(opt);
+
+    var opt1 = {};
+    opt1.container = document.getElementById("test01");
+    opt1.interval = 3000;
+    opt1.option = 1;
+    opt1.imgArr = [
+      ["res/1.jpg"]
+      ,["res/2.jpg"]
+      ,["res/3.jpg"]
+      ,["res/4.jpg"]
+      ,["res/5.jpg"]
+    ];
+    var slider1 = new SliderModal(opt1);
+  })();
+  </script>
+</body>
+</html>
